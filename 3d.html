@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styleport.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="Logo Icon-01-01.png" class="Logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#about" title="about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1 class="sub-title">My Portfolio</h1><br>
+                <u><h1 class="sub-title">3d model</h1></u><br>
+             
+                <a href="Advertising Poster.html"><img src="Advertising Poster.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="Mockup.html"><img src="mockupword.png"></a>&nbsp;&nbsp;&nbsp;
+                <a href="#header"><img src="3d model.png"></a> &nbsp;&nbsp;
+     
+                <br>
+             
+                <div class="image-container">
+            
+                    <div class="image"><img src="3d/3d.png" alt="" /></div>
+                    <div class="image"><img src="3d/Doraemon Portfolio.jpg" alt="" /></div>
+                    <div class="image"><img src="3d/gaming room.jpg" alt="" /></div>
+                    <div class="image"><img src="3d/Notebook pers.png" alt="" /></div>
+                    <div class="image"><img src="3d/yea.PNG" alt="" /></div>
+                  
+                 </div>
+
+                  </div>
+               
+                  <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="" alt="" />
+                  </div>
+                </div>
+              
+
+                <script>
+                  document.querySelectorAll(".image img").forEach(image => {
+                    image.onclick = () => {
+                      document.querySelector(".popup-image").style.display = "block";
+                      document.querySelector(".popup-image img").src =
+                        image.getAttribute("src");
+                    };
+                  });
+              
+                  document.querySelector(".popup-image span").onclick = () => {
+                    document.querySelector(".popup-image").style.display = "none";
+                  };
+                </script>
+
+              </body>
+              </html>

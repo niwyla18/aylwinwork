@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perosnal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href="#header"><img src="Logo Icon-01-01.png" class="Logo"></a>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>  
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Graphic Designer</p>
+            <h1>Hi, I'm <span>Aylwin</span> Cabardo.<br> A Graphic Designer</h1>
+            <p>3 years of experience in Graphic design. My mission is to design that you and your audience love.</p>
+        </div>
+    </div>
+</div>
+<!-- ------------------about-------------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="front.png">
+
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br>
+                
+                <p>Hi! I am Aylwin Cabardo 28 years old I completed Bachelors Science in Informatopn
+                    Technology Major in Multimedia from the University of San Jose Recoletos</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Adobe</span><br>Photoshop/Illustrator</li>
+
+                            <li><span>Game Development</span><br>Unity</li>
+
+                            <li><span>3d Model</span><br>Autodesk Maya 3d</li>
+                        </ul>
+
+                     </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016 - 2017</span><br>Internship Graphic Designer at CorDev Solution Inc.</li>
+
+                            <li><span>2017 - 2018</span><br>Internship Graphic Designer at Etchwork Digital Hammer</li>
+
+                            <li><span>2019 - 2022</span><br>Graphic Designer at International Pharmatiutical Inc</li>
+
+                            <li><span>2022 - 2023</span><br>Customer Service at Alorica</li>
+                            
+                        </ul>
+
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2009 - 2013<br>Highschool Diploma</span><br>Cherubs Academy</li>
+
+                            <li><span>2013 - 2018<br></b> Bachelor of Science in Information Technology major in Multimedia</span><br>University of San Jose Recoletos</li>
+
+                        </ul>
+
+                     </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- --------------------portfolio-------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1><br>
+        <div class="work-list">
+            <div class="work">
+                <img src="Poster/poster.png">
+                <div class="layer">
+                    <h3>Advertising Poster</h3>
+                    <p>Advertising design is the intersection of marketing and design.</p><br>
+                    <a href="Advertising Poster.html"><img src="icon link.png"></a></br>
+                </div>
+            </div>
+            <div class="work">
+                <img src="mock.png">
+                <div class="layer">
+                    <h3>Mock Up Design</h3>
+                    <p>mockup is a high-fidelity render of your product's
+                        design that showcases how the finished product will look.</p><br>
+                        <a href="Mockup.html"><img src="icon link.png"></a></br>
+                </div>
+            </div>
+            <div class="work">
+                <img src="3d/3d.png">
+                <div class="layer">
+                    <h3>3d Model</h3>
+                    <p>digitally build, sculpt, and add detail to 3D product, props and sets.</p><br>
+                        <a href="3d.html"><img src="icon link.png"></a></br>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</div>
+<!------------------contact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class=" fas fa-paper-plane"></i> aylwincabardo18@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>09952913956</p>
+                <div class="social-icons">
+                </div>
+                <a href="Cabardo, Aylwin.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+        </div>
+    </div>
+    <div class="copright">
+        <p>Copyright @ Aylwin.</p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+   
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzjy4N9fclHRNb1u1kMYlkLZGtPqyj-jUWQSoS8yEa0E3xSTGFMk60vDSqWPmYOn9_N/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },2000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>

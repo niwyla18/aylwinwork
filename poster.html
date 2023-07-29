@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styleport.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img src="Logo Icon-01-01.png" class="Logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about" title="about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1 class="sub-title">My Portfolio</h1><br>
+            <div class="tab-titles">
+                <p class="tab-links active-link"onclick="opentab('skills')">Advertising Poster</p>
+                <p class="tab-links" onclick="opentab('experience')">Mock-up</p>  
+                <p class="tab-links" onclick="opentab('education')">3d Model</p>  
+            </div>
+                <br>
+             
+                <div class="image-container">
+                 <div class="tab-contents active-tab" id="skills">
+                    <div class="image"><img src="Poster/1.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/3.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/4.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/herbycin1.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/herbycin2.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/herbycin3d.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/1200 x 675.jpg" alt="" /></div>
+                    <div class="image"><img src="Poster/winnerplat.jpg" alt="" /></div>
+                 </div>
+                 <div class="tab-contents" id="experience">
+                    <div class="image"><img src="Mockup/Front.png" alt="" /></div>
+                    <div class="image"><img src="Mockup/Back.png" alt="" /></div>
+                    <div class="image"><img src="Mockup/casino active femme left side 500 ml.png" alt="" /></div>
+                    <div class="image"><img src="Mockup/casino active femme side 500 ml.png" alt="" /></div>
+                    <div class="image"><img src="Mockup/Guide 1.jpg" alt="" /></div>
+                    <div class="image"><img src="Mockup/Guide 3.jpg" alt="" /></div>
+                
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <div class="image"><img src="3d/3d.png" alt="" /></div>
+                    <div class="image"><img src="3d/Doraemon Portfolio.jpg" alt="" /></div>
+                    <div class="image"><img src="3d/gaming room.jpg" alt="" /></div>
+                    <div class="image"><img src="3d/Notebook pers.png" alt="" /></div>
+                    <div class="image"><img src="3d/yea.PNG" alt="" /></div>
+                  
+                 </div>
+
+                  </div>
+               
+                  <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="" alt="" />
+                  </div>
+                </div>
+              
+
+                <script>
+                  document.querySelectorAll(".image img").forEach(image => {
+                    image.onclick = () => {
+                      document.querySelector(".popup-image").style.display = "block";
+                      document.querySelector(".popup-image img").src =
+                        image.getAttribute("src");
+                    };
+                  });
+              
+                  document.querySelector(".popup-image span").onclick = () => {
+                    document.querySelector(".popup-image").style.display = "none";
+                  };
+                </script>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+   
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+
+              </body>
+              </html>
